@@ -4,9 +4,9 @@ var map, pointarray, heatmap;
 
 function initialize() {
   var mapOptions = {
-    zoom: 13,
-    center: new google.maps.LatLng(35.56028, -81.22818),
-    mapTypeId: google.maps.MapTypeId.SATELLITE
+    zoom: 11,
+    center: new google.maps.LatLng(35.69028, -81.21818),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
   map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -19,6 +19,7 @@ function initialize() {
   });
 
   heatmap.setMap(map);
+  heatmap.set('radius', heatmap.get('radius') ? null : 20);
 }
 
 function toggleHeatmap() {
@@ -54,4 +55,5 @@ function changeOpacity() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
 
