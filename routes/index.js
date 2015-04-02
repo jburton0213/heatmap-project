@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   pg.connect(dbURL, function(err, client) {
   	client.query(query, function(err, result) {
   		done();
-  		if(err) throw err;
+  		if(err) console.log(err);
   		client.end();
   		res.render('index', { title: 'Express' });
   	})
