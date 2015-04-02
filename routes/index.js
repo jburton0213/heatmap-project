@@ -13,9 +13,9 @@ router.get('/', function(req, res, next) {
   		done();
   		if(err) throw err;
   		client.end();
+  		res.render('index', { title: 'Express' });
   	})
   })
-  res.render('index', { title: 'Express' });
 });
 
 module.exports = router;
