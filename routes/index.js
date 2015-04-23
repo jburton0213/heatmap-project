@@ -4,7 +4,7 @@ var mongodb = require('mongodb')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	
+	//Below logs visitors IP addresses
 	var uri = "mongodb://jburton0213:Mothman1131!@ds059821.mongolab.com:59821/heroku_app33948089"
 	var ip = req.headers['x-forwarded-for'] || 
      req.connection.remoteAddress || 
@@ -12,17 +12,15 @@ router.get('/', function(req, res, next) {
      req.connection.socket.remoteAddress;
   	var d = new Date();
   	var mongoobject = {"ipAddress" : ip,
-  						"date": d}
+  						            "date": d};
   	mongodb.MongoClient.connect(uri, function(err, db) {
   		if(err) throw err;;
   		var ipAddresses = db.collection('ipaddresses');
   		ipAddresses.insert(mongoobject, function(err, result) {
   		if(err) throw err;
-  		res.render('index', { title: 'Express' });
   		})
   	})
-
-  	
-  	});
+  res.render('index', { title: 'Express' });	
+});
 
 module.exports = router;

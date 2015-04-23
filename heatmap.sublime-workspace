@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"res",
+				"result"
+			],
+			[
+				"zw",
+				"zwsID"
+			],
+			[
+				"add",
+				"addZillowData"
+			],
+			[
+				"vo",
+				"votercollection"
+			],
+			[
+				"mongo",
+				"mongouri"
+			],
+			[
+				"get",
+				"get1000Voters"
+			],
+			[
+				"mono",
+				"mongoobject"
+			],
+			[
 				"timeo",
 				"timeobject"
 			],
@@ -84,22 +112,6 @@
 	"buffers":
 	[
 		{
-			"file": "views/layout.jade",
-			"settings":
-			{
-				"buffer_size": 112,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/index.jade",
-			"settings":
-			{
-				"buffer_size": 535,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Heatmaps</title>\n    \n    \n  </head>\n\n  <body>\n    <div id=\"panel\">\n      <button onclick=\"toggleHeatmap()\">Toggle Heatmap</button>\n      <button onclick=\"changeGradient()\">Change gradient</button>\n      <button onclick=\"changeRadius()\">Change radius</button>\n      <button onclick=\"changeOpacity()\">Change opacity</button>\n    </div>\n    <div id=\"map-canvas\"></div>\n  </body>\n</html>",
 			"file": "/C/Users/jburton/Desktop/heatmap.html",
 			"file_size": 2497,
@@ -138,19 +150,57 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 342,
+				"buffer_size": 399,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "var express = require('express');\nvar router = express.Router();\nvar pg = require('pg');\n//var dbURL = \"postgres://leyorvqudqwkay:47OUnM4sVxGeiAn-MJIr7-ErRp@ec2-50-19-249-214.compute-1.amazonaws.com:5432/d7bp9obaffs826\"\nvar dbURL = process.env.DATABASE_URL;\n/* GET home page. */\nrouter.get('/', function(req, res, next) {\n  var ipAddress = req.connection.remoteAddress;\n  var d = new Date();\n  pg.connect(dbURL, function(err, client) {\n\n  })\n  res.render('index', { title: 'Express' });\n});\n\nmodule.exports = router;\n",
 			"file": "routes/index.js",
-			"file_size": 214,
-			"file_write_time": 130715373203489196,
 			"settings":
 			{
-				"buffer_size": 517,
+				"buffer_size": 851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/price.js",
+			"settings":
+			{
+				"buffer_size": 805,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/specific.js",
+			"settings":
+			{
+				"buffer_size": 808,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/jburton/Desktop/UWO/tiedi/index.js",
+			"settings":
+			{
+				"buffer_size": 3054,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/process1000voters.js",
+			"settings":
+			{
+				"buffer_size": 2021,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "CLIN01	AACT	4	6	66.7%	10	28	35.7%	32.4%	12-Jan-2015	live 		0	1	1	06/03/2014		06/16/2014	06/03/2014	\nCLIN01	AACT	3	5	60.0%	9	27	33.3%	31.4%	12-Jan-2015	live 		0	1	1	06/03/2014		06/16/2014	06/03/2014	\nKELL02	OAKH	0	81	0.0%	0	282	0.0%	0.0%		no		0	0	0					\nKELL02	OAKH	0	80	0.0%	0	281	0.0%	0.0%		no		0	0	0					\n\n\n",
+			"settings":
+			{
+				"buffer_size": 309,
+				"line_ending": "Windows",
+				"name": "CLIN01	AACT	4	6	66.7%	10	28	35.7%	32.4%	12-Jan-201"
 			}
 		}
 	],
@@ -178,10 +228,22 @@
 	},
 	"file_history":
 	[
+		"/C/Users/jburton/Desktop/heatmap-project/views/index.jade",
+		"/C/Users/jburton/Desktop/heatmap-project/views/layout.jade",
+		"/C/Users/jburton/Desktop/NewCustomerCarrierCombos.sql",
+		"/C/Users/jburton/Desktop/heatmap-project/app.js",
+		"/C/Users/jburton/Desktop/heatmap-project/views/specific.jade",
+		"/C/Users/jburton/Documents/SQL Server Management Studio/Projects/INTE07 SP 2015-03-27.sql",
+		"/C/Users/jburton/Documents/SQL Server Management Studio/Projects/TURE01 SP 2015-04-13.sql",
+		"/C/Users/jburton/Documents/SQL Server Management Studio/Projects/SEAW01 SP 2015-03-27.sql",
+		"/C/Users/jburton/Documents/My Data Sources/Query from TIDBNew.odc",
+		"//server3web/TI_Bkup/PYLE/04069679.TXT",
+		"/C/Users/jburton/Documents/SQL Server Management Studio/Projects/INTE07 SP 2015-04-09.sql",
+		"/C/Users/jburton/Desktop/heatmap-project/routes/users.js",
+		"/C/Users/jburton/Desktop/heatmap-project/lib/process1000voters.js",
 		"//server3web/TI_Bkup/RBTW/214s/214_20150319_142538221.edi",
 		"//server3web/TI_Boomi/214s/Fail/ABFS214150322140754.TXT.map.LOG",
 		"/C/Users/jburton/Desktop/heatmap-project/public/javascripts/googleheatmapobject.js",
-		"/C/Users/jburton/Desktop/heatmap-project/app.js",
 		"/C/Users/jburton/Desktop/learnyounode/httpcollect.js",
 		"/C/Users/jburton/Documents/ProPCCleaner/log.txt",
 		"/C/Users/jburton/Documents/Visual Studio 2013/Projects/ConsoleApplication16/ConsoleApplication16/bin/Debug/googleheatmapobject.js",
@@ -216,6 +278,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"forEach",
+			"docs",
+			"forEach",
+			"function",
+			"doc",
 			"link",
 			"console",
 			"log",
@@ -241,65 +308,11 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 10,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/layout.jade",
-					"settings":
-					{
-						"buffer_size": 112,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								112,
-								112
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "views/index.jade",
-					"settings":
-					{
-						"buffer_size": 535,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								216,
-								216
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "/C/Users/jburton/Desktop/heatmap.html",
 					"settings":
 					{
@@ -310,8 +323,8 @@
 						"selection":
 						[
 							[
-								161,
-								174
+								454,
+								454
 							]
 						],
 						"settings":
@@ -327,7 +340,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "public/javascripts/heatmap.js",
 					"settings":
 					{
@@ -355,7 +368,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 2,
 					"file": "public/stylesheets/heatmaps.css",
 					"settings":
 					{
@@ -383,7 +396,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 3,
 					"file": "bin/www",
 					"settings":
 					{
@@ -411,19 +424,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 4,
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 342,
+						"buffer_size": 399,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								194,
-								194
+								387,
+								387
 							]
 						],
 						"settings":
@@ -439,24 +452,163 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 5,
 					"file": "routes/index.js",
 					"settings":
 					{
-						"buffer_size": 517,
+						"buffer_size": 851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								257,
-								257
+								546,
+								546
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "routes/price.js",
+					"settings":
+					{
+						"buffer_size": 805,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								805,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "routes/specific.js",
+					"settings":
+					{
+						"buffer_size": 808,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								750,
+								750
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Users/jburton/Desktop/UWO/tiedi/index.js",
+					"settings":
+					{
+						"buffer_size": 3054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								428,
+								439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "lib/process1000voters.js",
+					"settings":
+					{
+						"buffer_size": 2021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1694,
+								1694
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"settings":
+					{
+						"buffer_size": 309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								306
+							]
+						],
+						"settings":
+						{
+							"auto_name": "CLIN01	AACT	4	6	66.7%	10	28	35.7%	32.4%	12-Jan-201",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -518,7 +670,7 @@
 		[
 			[
 				"",
-				"/C/Users/jburton/Desktop/tiedi/TIEDI.sublime-project"
+				"/C/Users/jburton/Desktop/learnyounode/learnyounode.sublime-project"
 			]
 		],
 		"width": 380.0

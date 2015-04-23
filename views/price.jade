@@ -1,0 +1,16 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/heatmaps.css')
+  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization")
+  script(src="/javascripts/googleheatmapobject.js")
+  script(src="/javascripts/heatmap.js")   
+
+block content
+  #panel
+    button(onclick='toggleHeatmap()') Toggle Heatmap
+    button(onclick='changeGradient()') Change gradient
+    button(onclick='changeRadius()') change radius
+    button(onclick='changeOpacity()') Change opacity
+
+  #map-canvas
