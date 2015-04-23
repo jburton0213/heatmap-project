@@ -16,7 +16,7 @@ function initialize() {
 
   heatmap = new google.maps.visualization.HeatmapLayer({
     data: zillowdata,
-    dissipating:falso
+    dissipating: false
   });
 
   heatmap.setMap(map);
