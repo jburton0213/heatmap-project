@@ -15,8 +15,8 @@ function initialize() {
   //var pointArray = new google.maps.MVCArray(zillowdata);
 
   heatmap = new google.maps.visualization.HeatmapLayer({
-    data: zillowdata,
-    dissipating: false
+    data: zillowdata
+    //dissipating: false
   });
 
   heatmap.setMap(map);
