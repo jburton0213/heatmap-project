@@ -9,7 +9,7 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
-  map = new google.maps.Map(document.getElementById('map-canvas'),
+  map = new google.maps.Map(document.getElementById('map'),
       mapOptions);
 
   //var pointArray = new google.maps.MVCArray(zillowdata);
