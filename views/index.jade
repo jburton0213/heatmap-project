@@ -10,12 +10,21 @@ block head
 block content
   script(type='text/javascript').
     createHeatMapObject(!{JSON.stringify(zillowData)});
-  .container
+  div(class="container some-thing-else")
     .jumbotron(id="map" style="height:700px")
-  #panel
-    button(onclick='toggleHeatmap()') Toggle Heatmap
-    button(onclick='changeGradient()') Change gradient
-    button(onclick='changeRadius()') change radius
-    button(onclick='changeOpacity()') Change opacity
+
+  div(class="wrapper text-center")
+    div(class="btn-group" role="group" aria-label="...")
+      button(type="button" class="btn btn-default" onclick='toggleHeatmap()') Toggle Heatmap
+      button(type="button" class="btn btn-default" onclick='changeGradient()') Change Gradient
+      button(type="button" class="btn btn-default" onclick='changeRadius()') Change Radius
+      button(type="button" class="btn btn-default" onclick='changeOpacity()') Change Opacity
+
+
+  //#panel
+    //button(onclick='toggleHeatmap()') Toggle Heatmap
+    //button(onclick='changeGradient()') Change gradient
+    //button(onclick='changeRadius()') change radius
+    //button(onclick='changeOpacity()') Change opacity
 
 
