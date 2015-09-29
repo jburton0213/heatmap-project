@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(type='text/javascript').
+            function sendGetCustomerRequest(){
+              var x = document.getElementById("customerlist").value;
+              var request = "http://localhost:3000/customer?customer=" + x
+              window.open(request, "_self")
+              };
+        block head
+    body
+        #headContainer.pageHeader
+            center
+                //h1 #{JSON.stringify(docs.customercodes)}
+                h1 EDI Statistics
+        #leftContainer.pageLeftMenu
+            select#customerlist(size=30 onChange="sendGetCustomerRequest()")
+            script(type='text/javascript').
+              //var localdata = #{docs.customercodes};
+              //var arr = localdata.split(",");+
+              var dfdfdf = #{docs};
+              arr = #{docs.customercodes};
+              arr.sort();
+              if(arr.length){
+              var select = document.getElementById("customerlist");
+              arr.forEach(function (element, index) {
+              var x = document.createElement("option");
+              x.text = (element);
+              select.options.add(x, index);
+                })};
+              
+        #contentContainer.pageContent
+            h1 #{(JSON.stringify(docs.customercodes))}
+            h1 #{docs.customercodes}
+            block content
+        #footerContainer.pageFooter

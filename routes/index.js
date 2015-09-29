@@ -14,13 +14,18 @@ router.get('/', function(req, res, next) {
   	var mongoobject = {"ipAddress" : ip,
   						            "date": d};
   	mongodb.MongoClient.connect(uri, function(err, db) {
-  		if(err) throw err;;
+  		if(err) throw err;
   		var ipAddresses = db.collection('ipaddresses');
+      var voters = db.collection('voters');
   		ipAddresses.insert(mongoobject, function(err, result) {
   		if(err) throw err;
   		})
+      voters.find({processed:1}, {limit:10000, fields:{latitude:1, longitude:1, finishedSqFt:1, taxAssessment:1}}).toArray(function(err, items) {
+        if (err) throw err;
+          res.render('index', { zillowData: items }); 
+        })
+ 
+      })
   	})
-  res.render('index', { title: 'Express' });	
-});
 
 module.exports = router;

@@ -1,5 +1,6 @@
 // Adding 500 Data Points
-var map, pointarray, heatmap;
+var map, pointarray, heatmap, numberOfDataPoints;
+var zillowData = [];
 
 
 function initialize() {
@@ -15,7 +16,7 @@ function initialize() {
   //var pointArray = new google.maps.MVCArray(zillowdata);
 
   heatmap = new google.maps.visualization.HeatmapLayer({
-    data: zillowdata
+    data: zillowData
     //dissipating: false
   });
 
@@ -57,4 +58,14 @@ function changeOpacity() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-
+function createHeatMapObject(data) {
+  data.forEach(function (element, index) {
+    var SPSQF = element.taxAssessment / element.finishedSqFt;
+    if (isFinite(SPSQF)) {
+      numberOfDataPoints++;
+      zillowData.push({location: new google.maps.LatLng(element.latitude, element.longitude), SPSQF})
+    }
+  }
+)
+console.log(numberOfDataPoints.toString());
+}

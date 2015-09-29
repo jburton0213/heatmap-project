@@ -1,4 +1,4 @@
-var zillowdata = [
+var zillowData = [
 {location: new google.maps.LatLng(35.56098, -81.00108), weight: 167.1544},
 {location: new google.maps.LatLng(35.68749, -81.1657), weight: 80.43785},
 {location: new google.maps.LatLng(35.64912, -81.28232), weight: 115.3586},

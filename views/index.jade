@@ -5,20 +5,17 @@ block head
   //Had to comment this out b/c it was fucking my shit up ie navbar that I worked so hard on.
   //link(rel='stylesheet', href='/stylesheets/heatmaps.css')
   script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization")
-  script(src="/javascripts/googleheatmapobject.js")
   script(src="/javascripts/heatmap.js")   
 
 block content
-
+  script(type='text/javascript').
+    createHeatMapObject(!{JSON.stringify(zillowData)});
   .container
     .jumbotron(id="map" style="height:700px")
-        
-
-
-  //#panel
-    //button(onclick='toggleHeatmap()') Toggle Heatmap
-    //button(onclick='changeGradient()') Change gradient
-    //button(onclick='changeRadius()') change radius
-    //button(onclick='changeOpacity()') Change opacity
+  #panel
+    button(onclick='toggleHeatmap()') Toggle Heatmap
+    button(onclick='changeGradient()') Change gradient
+    button(onclick='changeRadius()') change radius
+    button(onclick='changeOpacity()') Change opacity
 
 
