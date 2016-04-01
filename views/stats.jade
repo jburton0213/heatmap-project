@@ -1,0 +1,72 @@
+﻿extends layout
+
+block head
+
+  script(src="/node_modules/highcharts/highcharts.js")
+
+block content
+  div
+    h1.title #{data.title} Voter Demographics
+    
+  div
+    div#partycontainer.col-md-4.graphdiv
+        script.
+            var mySeries = [!{data.party}]
+            $(function () {
+                $('#partycontainer').highcharts({
+                    chart: {type: 'pie'},
+                    plotOptions: { pie: {allowPointSelect: true}},
+                    title: {text: 'Party Affiliation'},
+                    legend: {enabled: false},
+                    series: [{data: mySeries}]
+                });
+            });
+            
+    div#racecontainer.col-md-4.graphdiv
+        script.
+            var mySeries2 = [!{data.race}]
+            $(function () {
+                $('#racecontainer').highcharts({
+                    chart: {type: 'column'},
+                    title: {text: 'Race' },
+                    xAxis : { categories : ['W','O','B','U','M','A','I'] },
+                    yAxis: {title: {text: ''}},
+                    legend: {enabled: false},
+                    series: [{data: mySeries2}]
+                });
+            });
+            
+    div#gendercontainer.col-md-4.graphdiv
+        script.
+            var mySeries3 = [!{data.gender}]
+            $(function () {
+                $('#gendercontainer').highcharts({
+                chart: {type: 'pie'},
+                title: {text: 'Gender'},
+                plotOptions: {pie: {allowPointSelect: true}},
+                series: [{data: mySeries3}]
+                });
+            });
+            
+  div
+    div#agecontainer.col-md-4.graphdiv
+        script.
+            var mySeriesage = [!{data.age}]
+            $(function () {
+                $('#agecontainer').highcharts({
+                    chart: {type: 'column'},
+                    title: {text: 'Age'},
+                    xAxis: {categories : ['<20', '20s', '30s', '40s', '50s', '60s', '70s', '80s', '90s', '>99']},
+                    yAxis: {title: {text: ''}},
+                    legend: {enabled : false },
+                    series: [{data: mySeriesage}]
+                });
+            });
+            
+    div#txtstats.col-md-4.statsdiv
+        h4 Some interesting statistics...
+        p Average home price: 
+        p Average Price per square foot:
+        p Mean home price: 
+        p Mean Price per square foot:
+         

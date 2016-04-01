@@ -1,0 +1,47 @@
+extends layout
+
+block head
+
+block content
+
+  div.container.page-header(id="searchDiv")
+    
+    #searchform.form-inline
+
+      div.form-group.col-sm-4.searchformgroup
+        label(for="name") Name:  
+        input.form-control(type="text" id="name" placeholder="LAST, FIRST MIDDLE")
+
+      div.form-group.col-sm-4.searchformgroup
+        label(for="streetAddress") Street Address:  
+        input.form-control(type="text" id="address")
+
+      div.form-group.col-sm-4.searchformgroup
+        label(for="party") Party:  
+        input.form-control(type="text" id="party")
+
+      div.form-group.col-sm-4.searchformgroup
+        lable(for="zip") Zip:  
+        input.form-control(type="text" id="zip")
+
+      div.form-group.col-sm-4.searchformgroup
+        lable(for="gender") Gender:  
+        input.form-control(type="text" id="gender")
+
+      div.form-group.col-sm-4.searchformgroup
+        lable(for="city") City:  
+        input.form-control(type="text" id="city")
+
+      div.form-group.col-sm-4.searchformgroup
+        lable(for="bedrooms") Bedrooms:  
+        input.form-control(type="text" id="bedrooms")
+
+      div.form-group.col-sm-4.searchformgroup
+        lable(for="bathrooms") Bathrooms:  
+        input.form-control(type="text" id="bathrooms")
+
+      button.btn.btn-default.col-sm-4(type="button" id="submitbutton") Submit
+  
+  div(id="tableDiv")
+
+  script(src="/javascripts/search.js")

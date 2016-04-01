@@ -2,14 +2,12 @@ extends layout
 
 block head
 
-  //Had to comment this out b/c it was fucking my shit up ie navbar that I worked so hard on.
-  //link(rel='stylesheet', href='/stylesheets/heatmaps.css')
   script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization")
   script(src="/javascripts/heatmap.js")   
 
 block content
   script(type='text/javascript').
-    createHeatMapObject(!{JSON.stringify(zillowData)});
+    createHeatMapObject(!{JSON.stringify(zillowData)});    
   div(class="container some-thing-else")
     .jumbotron(id="map" style="height:700px")
 
@@ -20,11 +18,7 @@ block content
       button(type="button" class="btn btn-default" onclick='changeRadius()') Change Radius
       button(type="button" class="btn btn-default" onclick='changeOpacity()') Change Opacity
 
+  script(src="/javascripts/index.js")
 
-  //#panel
-    //button(onclick='toggleHeatmap()') Toggle Heatmap
-    //button(onclick='changeGradient()') Change gradient
-    //button(onclick='changeRadius()') change radius
-    //button(onclick='changeOpacity()') Change opacity
 
 

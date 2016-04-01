@@ -8,8 +8,9 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var price = require('./routes/price')
-var specific = require('./routes/specific')
-var updatemongo = require('./routes/updatemongo')
+var search = require('./routes/search');
+var query = require('./routes/query');
+var stats = require('./routes/stats');
 
 var app = express();
 
@@ -23,13 +24,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//Here's where I map to directories I need to access.
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/lib', express.static(path.join(__dirname, 'lib')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/', routes);
 app.use('/users', users);
 app.use('/price', price);
-app.use('/specific', specific);
-app.use('/updatemongo', updatemongo);
+app.use('/search', search);
+app.use('/query', query);
+app.use('/stats', stats)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
