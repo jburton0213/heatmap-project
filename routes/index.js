@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
   		ipAddresses.insert(mongoobject, function(err, result) {
   		if(err) throw err;
   		})
-      voters.find({processed:1}, {limit:1, fields:{latitude:1, longitude:1, finishedSqFt:1, taxAssessment:1, _id:0}}).toArray(function(err, items) {
+      voters.find({processed:1}, {limit:1000, fields:{latitude:1, longitude:1, finishedSqFt:1, taxAssessment:1, _id:0}}).toArray(function(err, items) {
         if (err) throw err;
           res.render('index', { zillowData: items }); 
         })
