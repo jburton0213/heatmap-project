@@ -5,7 +5,7 @@ var mongodb = require('mongodb')
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	//Below logs visitors IP addresses
-	var uri = "mongodb://readonly:gjvlejh8567jcvneu8@ds059821.mongolab.com:59821/heroku_app33948089"
+	var uri = "mongodb://insert:jdur784khi9erj@ds059821.mongolab.com:59821/heroku_app33948089"
 	var ip = req.headers['x-forwarded-for'] || 
      req.connection.remoteAddress || 
      req.socket.remoteAddress ||
