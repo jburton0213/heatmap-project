@@ -1,46 +1,51 @@
 extends layout
 
 block head
+  style.
+    input {width: 10%; clear: both}
+  script(src='/lib/jquery.bootpag.min.js')
 
 block content
 
   div.container.page-header(id="searchDiv")
     
-    #searchform.form-inline
+    form#searchform.form-inline
 
       div.form-group.col-sm-4.searchformgroup
         label(for="name") Name:  
-        input.form-control(type="text" id="name" placeholder="LAST, FIRST MIDDLE")
+        input.form-control(type="text" id="name" style="width: 100%;" placeholder="LAST, FIRST MIDDLE")
 
       div.form-group.col-sm-4.searchformgroup
-        label(for="streetAddress") Street Address:  
-        input.form-control(type="text" id="address")
+        label(for="streetAddress" ) Street Address:  
+        input.form-control(type="text" style="width: 100%;" id="address")
 
       div.form-group.col-sm-4.searchformgroup
         label(for="party") Party:  
-        input.form-control(type="text" id="party")
+        input.form-control(type="text" style="width: 100%;" id="party")
 
       div.form-group.col-sm-4.searchformgroup
         lable(for="zip") Zip:  
-        input.form-control(type="text" id="zip")
+        input.form-control(type="text" style="width: 100%;" id="zip")
 
       div.form-group.col-sm-4.searchformgroup
         lable(for="gender") Gender:  
-        input.form-control(type="text" id="gender")
+        input.form-control(type="text" style="width: 100%;" id="gender")
 
       div.form-group.col-sm-4.searchformgroup
         lable(for="city") City:  
-        input.form-control(type="text" id="city")
+        input.form-control(type="text" style="width: 100%;" id="city")
 
       div.form-group.col-sm-4.searchformgroup
         lable(for="bedrooms") Bedrooms:  
-        input.form-control(type="text" id="bedrooms")
+        input.form-control(type="text" style="width: 100%;" id="bedrooms")
 
       div.form-group.col-sm-4.searchformgroup
         lable(for="bathrooms") Bathrooms:  
-        input.form-control(type="text" id="bathrooms")
-
-      button.btn.btn-default.col-sm-4(type="button" id="submitbutton") Submit
+        input.form-control(type="text" style="width: 100%;" id="bathrooms")
+        
+      div.form-group.col-sm-4
+        br
+        button.btn.btn-default.col-sm-4(type="button" id="submitbutton" style="width: 100%;" ) Submit
   
   div(id="tableDiv")
 
