@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-// var debug = require('debug')('heatmap:server');
+var debug = require('debug')('heatmap:server');
 var http = require('http');
 
 /**
