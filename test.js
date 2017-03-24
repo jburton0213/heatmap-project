@@ -1,23 +1,24 @@
-﻿var connectionstrings = require('../connectionstrings');
+var connectionstrings = require('./connectionstrings');
 var Promise = require("bluebird");
 var MongoDB = Promise.promisifyAll(require("mongodb"));
 var MongoClient = Promise.promisifyAll(MongoDB.MongoClient);
-console.log(connectionstrings.mongoinsert)
+
 var express = require('express');
 var router = express.Router();
 var mongodb = require('mongodb')
 
 /* GET home page. */
 router.get('/:city', function (req, res, next) { 
-    console.log("I'm here at line 12")
+
     if (req.params.city != 'county') {
         var city = req.params.city.toUpperCase();
+        data.title = ucwords(req.params.city);          
     } else {
         var city = ".";
+        data.title = 'County-Wide';
     }
 
     var party = new Promise((resolve, reject) => {
-        console.log("line 20")
         MongoClient.connectAsync(connectionstrings.mongoinsert)
         .then(function (db) {
         return db.collection('voters')
@@ -81,7 +82,7 @@ router.get('/:city', function (req, res, next) {
 
     Promise.all([party, race, age]).then(values => {
     console.log(values);
-    console.log("line 84")
+
     res.render('stats', { data : values });
 
     }).catch(reason => {
